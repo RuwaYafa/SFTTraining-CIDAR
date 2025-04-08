@@ -50,7 +50,7 @@ def save_dataset(dataset, output_path, n):
     eval_messages= [{"messages": [{"content": system_prompt, "role": "system"}, 
                                   {"content": user_prompt.format(instruction=e['instruction']), "role": "user"}, 
                                   {"content": e["output"], "role": "assistant"}]} 
-                    for e in dataset["eval"]
+                    for e in dataset["test"]
                     ]
     #End RFA
     
