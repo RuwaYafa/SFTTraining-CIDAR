@@ -25,11 +25,11 @@ def save_dataset(dataset, output_path, n):
     """
 
     # Open the system prompt file and read its content #mon
-    with open('/src/blm/prompts/system_prompt.txt', 'r') as file:
+    with open('/content/SFTTraining-CIDAR/src/blm/prompts/system_prompt.txt', 'r') as file:
         system_prompt = file.read()
 
     # Open the user prompt file and read its content #mon
-    with open('/src/blm/prompts/user_prompt.txt', 'r') as file:
+    with open('/content/SFTTraining-CIDAR/src/blm/prompts/user_prompt.txt', 'r') as file:
         user_prompt = file.read()
 
     # # Mohd
