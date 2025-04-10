@@ -1,6 +1,10 @@
 # Large Language Model Training and Fine-Tuning
 Source code to train and fine-tune LLMs using TRL SFTTrainer and Deepspeed
 
+## Credits
+
+This project is based on [LLMTraining](https://github.com/mohammedkhalilia/LLMTraining/tree/main) by [mohammedkhalilia](https://github.com/mohammedkhalilia).
+
 ## Setup your environment
 The configurations including channels and packages to use are all specified in `env.yml`. The below command will create the required conda env. The `--prefix` in the command below points to the location of the new conda env. When you run the command below, make sure you replace `[USERNAME]` with your username on the server and `[ENV_NAME]` with the name of your conda env.
 
