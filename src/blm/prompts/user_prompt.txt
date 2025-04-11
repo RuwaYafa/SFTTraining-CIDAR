@@ -1,1 +1,1 @@
-Given the following question to answer: {instruction}
+Answer the following question about Arabic culture: {instruction}
