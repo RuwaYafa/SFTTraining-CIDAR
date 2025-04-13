@@ -29,6 +29,8 @@ def create_and_prepare_model(args):
 
     model = AutoModelForCausalLM.from_pretrained(
         args.model_name_or_path,
+        # cache_dir="/content/hugging_face/", #rfa
+
         config=config,
         attn_implementation=args.attn_implementation,
         quantization_config=quantization_config,
@@ -76,6 +78,8 @@ def create_and_prepare_model(args):
 
     # tokenizer
     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, token=args.token)
+    # tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, token=args.token, trust_remote_code=True) #rfa
+
     tokenizer.pad_token = tokenizer.eos_token
 
     return model, peft_config, tokenizer
