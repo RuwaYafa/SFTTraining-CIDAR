@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 def main(args):
-    os.makedirs(args.merged_path)
+    os.makedirs(args.merged_path, exit_ok=True)
 
     logger.info(f"LoRA checkcpoint: {args.lora_path}")
     device = None if torch.cuda.is_available() else "cpu"
