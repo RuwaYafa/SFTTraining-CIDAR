@@ -1,8 +1,8 @@
 import logging
 import argparse
-from datasets import Dataset, DatasetDict, load_dataset #,Features, Value, Sequence, ClassLabel #mon
+from datasets import Dataset, DatasetDict, load_dataset, Features, Value, Sequence, ClassLabel #mon
 from blm.utils.helpers import logging_config
-# import pyarrow as paPyright #mon
+import pyarrow as paPyright #mon
 
 logger = logging.getLogger(__name__)
 
@@ -53,20 +53,21 @@ def save_dataset(dataset, output_path, n):
                     for e in dataset["test"]
                     ]
     #End RFA
+
+    #mon 
+    features = Features({
+        "messages": Sequence({
+            "content": Value("string"),
+            "role": Value("string")
+        })
+    })
     
     ds = DatasetDict({
-        "train": Dataset.from_list(train_messages[:n]),
-        "eval": Dataset.from_list(eval_messages[:int(n*0.1)])
+        "train": Dataset.from_list((train_messages[:n]), features),
+        "eval": Dataset.from_list((eval_messages[:int(n*0.1)]), features)
     })
 
-    # mon:
-    # features = Features({
-    #     "messages": Sequence({
-    #         "content": Value("string"),
-    #         "role": Value("string")
-    #     })
-    # })
-
+    #mon
     # ds = DatasetDict({
     #     "train": Dataset.from_list(train_messages, features=features),
     #     "eval": Dataset.from_list(eval_messages, features=features)
