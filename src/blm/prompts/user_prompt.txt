@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+questions relevant to Arabic culture without bias {instruction}.
+=======
 Answer the following question about Arabic culture: {instruction}
+>>>>>>> 057669b0ec0ddd915c64433e12622e191c8f3b46

@@ -180,6 +180,10 @@ dependencies:
       - werkzeug==3.1.3
       - xxhash==3.5.0
       - yarl==1.18.3
+<<<<<<< HEAD
+prefix: rep/rabuhweidi/envs/SFTenv
+=======
 prefix: /rep/mkhalilia/envs/dev
 # prefix: rep/rabuhweidi/envs/SFTenv
 # prefix: rep/rabuhweidi/envs/mohdenv
+>>>>>>> 057669b0ec0ddd915c64433e12622e191c8f3b46

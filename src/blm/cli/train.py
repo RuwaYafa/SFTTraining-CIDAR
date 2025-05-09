@@ -58,7 +58,11 @@ class ModelArguments:
 class LoRaArguments:
     lora_alpha: Optional[int] = field(default=16)
     lora_dropout: Optional[float] = field(default=0.1)
+<<<<<<< HEAD
+    lora_r: Optional[int] = field(default=16)
+=======
     lora_r: Optional[int] = field(default=64)
+>>>>>>> 057669b0ec0ddd915c64433e12622e191c8f3b46
     use_flash_attn: Optional[bool] = field(
         default=False,
         metadata={"help": "Enables Flash attention for training."},
@@ -75,7 +79,11 @@ class DataArguments:
         default=None, metadata={"help": "The input training data file (a csv or JSON file)."}
     )
     max_seq_length: int = field(
+<<<<<<< HEAD
+        default=512,
+=======
         default=None,
+>>>>>>> 057669b0ec0ddd915c64433e12622e191c8f3b46
         metadata={
             "help": (
                 "The maximum total input sequence length after tokenization. If set, sequences longer "
@@ -84,7 +92,10 @@ class DataArguments:
         },
     )
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 057669b0ec0ddd915c64433e12622e191c8f3b46
 def do_train():
     parser = HfArgumentParser((DataArguments, TrainingArguments, ModelArguments, LoRaArguments))
     data_args, train_args, model_args, lora_args, _ = parser.parse_args_into_dataclasses(return_remaining_strings=True)

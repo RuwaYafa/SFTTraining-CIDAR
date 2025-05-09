@@ -1,4 +1,8 @@
 import sys
+<<<<<<< HEAD
+import os
+=======
+>>>>>>> 057669b0ec0ddd915c64433e12622e191c8f3b46
 import argparse
 import logging
 import subprocess
@@ -60,11 +64,30 @@ def logging_config(log_file=None):
     :param log_file: Path - log to this file
     :return: None
     """
+<<<<<<< HEAD
+    # handlers = [logging.StreamHandler(sys.stdout)] # mohd
+    handlers = [logging.StreamHandler(sys.stdout)] #mon
+
+
+    if log_file:
+        # Get the folder path from the log file path
+        folder_path = os.path.dirname(log_file)
+
+        # if not os.path.exists(folder_path):
+        if not os.path.exists(folder_path): #rfa
+        # if folder_path != '' and not os.path.exists(folder_path): #rfa
+            os.makedirs(folder_path, exist_ok=True) #mon
+            print(f"Folder created: {folder_path}")
+
+        handlers.append(logging.FileHandler(log_file, "w", "utf-8")) #rfa
+        print("Logging to {}".format(log_file)) #rfa
+=======
     handlers = [logging.StreamHandler(sys.stdout)]
 
     if log_file:
         handlers.append(logging.FileHandler(log_file, "w", "utf-8"))
         print("Logging to {}".format(log_file))
+>>>>>>> 057669b0ec0ddd915c64433e12622e191c8f3b46
 
     logging.basicConfig(
         level=logging.INFO,
