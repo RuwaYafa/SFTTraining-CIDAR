@@ -181,7 +181,7 @@ dependencies:
       - xxhash==3.5.0
       - yarl==1.18.3
 <<<<<<< HEAD
-prefix: rep/rabuhweidi/envs/SFTenv
+prefix: rep/rabuhweidi/envs/.conda/RFA
 =======
 prefix: /rep/mkhalilia/envs/dev
 # prefix: rep/rabuhweidi/envs/SFTenv
